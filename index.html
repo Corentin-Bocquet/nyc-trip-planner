@@ -12,9 +12,9 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
+            font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #0a1929 0%, #1a2332 50%, #0f1419 100%);
+            color: #e3e8ef;
             line-height: 1.6;
             padding: 20px;
             min-height: 100vh;
@@ -27,113 +27,155 @@
 
         header {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             animation: fadeInDown 1s;
         }
 
         header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffa500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+            letter-spacing: -1px;
         }
 
         header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+            font-size: 1.3em;
+            color: #94a3b8;
+            font-weight: 500;
         }
 
         .budget-summary {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1.5px solid rgba(148, 163, 184, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             animation: fadeIn 1.2s;
         }
 
         .budget-summary h2 {
-            margin-bottom: 20px;
-            font-size: 1.8em;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #ffd700;
+            font-weight: 700;
         }
 
         .budget-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
             margin-top: 20px;
         }
 
         .budget-item {
-            background: rgba(255,255,255,0.15);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .budget-item:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.5);
+            background: rgba(30, 41, 59, 0.7);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.15);
         }
 
         .budget-item h3 {
             font-size: 1.1em;
-            margin-bottom: 10px;
-            opacity: 0.9;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+            font-weight: 600;
         }
 
         .budget-item .amount {
-            font-size: 2em;
-            font-weight: bold;
+            font-size: 2.5em;
+            font-weight: 800;
             color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            margin: 8px 0;
+        }
+
+        .budget-item p {
+            color: #94a3b8;
+            font-size: 0.95em;
         }
 
         .day-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            margin: 30px 0;
+            border: 1.5px solid rgba(148, 163, 184, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
             animation: fadeInUp 0.8s;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s ease;
         }
 
         .day-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+            border-color: rgba(255, 215, 0, 0.3);
         }
 
         .day-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(100, 116, 139, 0.2);
         }
 
         .day-header h2 {
-            font-size: 2em;
+            font-size: 2.2em;
+            color: #ffd700;
+            font-weight: 700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
         }
 
         .day-budget {
-            background: rgba(255, 215, 0, 0.2);
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
+            background: rgba(255, 215, 0, 0.12);
+            backdrop-filter: blur(10px);
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
             color: #ffd700;
+            border: 1.5px solid rgba(255, 215, 0, 0.3);
+            font-size: 1.15em;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
         }
 
         .time-block {
-            margin: 20px 0;
-            padding: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            border-left: 4px solid #ffd700;
+            margin: 28px 0;
+            padding: 28px;
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         .time-block h3 {
-            font-size: 1.4em;
-            margin-bottom: 15px;
+            font-size: 1.6em;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            color: #93c5fd;
+            font-weight: 700;
         }
 
         .time-block ul {
@@ -142,39 +184,61 @@
         }
 
         .time-block li {
-            padding: 8px 0;
-            padding-left: 25px;
+            padding: 12px 0;
+            padding-left: 32px;
             position: relative;
+            color: #e2e8f0;
+            font-size: 1.05em;
+            line-height: 1.7;
         }
 
         .time-block li:before {
             content: "•";
             position: absolute;
             left: 0;
-            color: #ffd700;
-            font-size: 1.5em;
+            color: #3b82f6;
+            font-size: 2em;
+            line-height: 0.9;
+        }
+
+        .location-link {
+            color: #fbbf24;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
+            padding-bottom: 2px;
+        }
+
+        .location-link:hover {
+            color: #fcd34d;
+            border-bottom-color: #fcd34d;
+            text-shadow: 0 0 12px rgba(252, 211, 77, 0.5);
         }
 
         .metro-info {
-            background: rgba(0, 123, 255, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            border-left: 4px solid #007bff;
+            background: rgba(59, 130, 246, 0.12);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 18px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .metro-info strong {
-            color: #a0cfff;
+            color: #93c5fd;
+            font-weight: 700;
         }
 
         .icon {
-            font-size: 1.2em;
+            font-size: 1.4em;
         }
 
         @keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(-30px);
+                transform: translateY(-40px);
             }
             to {
                 opacity: 1;
@@ -185,7 +249,7 @@
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -200,26 +264,47 @@
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             .day-header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 10px;
+                gap: 12px;
+            }
+            .budget-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         .tips-section {
-            background: rgba(40, 167, 69, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 4px solid #28a745;
+            background: rgba(16, 185, 129, 0.12);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 12px;
+            margin: 24px 0;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .tips-section h3 {
-            margin-bottom: 10px;
-            color: #90ee90;
+            margin-bottom: 12px;
+            color: #6ee7b7;
+            font-weight: 700;
+        }
+
+        .tips-section p {
+            color: #d1fae5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #94a3b8;
+            font-size: 1.1em;
+        }
+
+        footer p {
+            margin: 8px 0;
         }
     </style>
 </head>
@@ -266,9 +351,9 @@
             <div class="time-block">
                 <h3><span class="icon">☀️</span> Matin</h3>
                 <ul>
-                    <li>Arrivée / prise de repères</li>
-                    <li>Balade Times Square, Bryant Park</li>
-                    <li>New York Public Library</li>
+                    >Arrivée / prise de repères</li>
+                    >Balade <a href="https://maps.google.com/?q=Times+Square+New+York" target="_blank" class="location-link">Times Square</a>, <a href="https://maps.google.com/?q=Bryant+Park+New+York" target="_blank" class="location-link">Bryant Park</a></li>
+                    ><a href="https://maps.google.com/?q=New+York+Public+Library" target="_blank" class="location-link">New York Public Library</a></li>
                 </ul>
                 <div class="metro-info">
                     <strong>🚇 Métro :</strong> Times Sq – 42 St (lignes N/Q/R/W/1/2/3/7)
@@ -278,8 +363,8 @@
             <div class="time-block">
                 <h3><span class="icon">🌞</span> Après-midi</h3>
                 <ul>
-                    <li>Hudson Yards : The Vessel (extérieur gratos)</li>
-                    <li>Balade High Line (parc sur ancienne voie ferrée)</li>
+                    ><a href="https://maps.google.com/?q=Hudson+Yards+New+York" target="_blank" class="location-link">Hudson Yards</a> : The Vessel (extérieur gratos)</li>
+                    >Balade <a href="https://maps.google.com/?q=High+Line+Park+New+York" target="_blank" class="location-link">High Line</a> (parc sur ancienne voie ferrée)</li>
                 </ul>
                 <div class="metro-info">
                     <strong>🚇 Métro :</strong> 34 St – Hudson Yards (ligne 7)
@@ -289,8 +374,8 @@
             <div class="time-block">
                 <h3><span class="icon">🌃</span> Soir</h3>
                 <ul>
-                    <li>Times Square de nuit (obligé)</li>
-                    <li>Cheesecake chez Junior's (20-30$)</li>
+                    >Times Square de nuit (obligé)</li>
+                    >Cheesecake chez <a href="https://maps.google.com/?q=Junior's+Restaurant+Times+Square+New+York" target="_blank" class="location-link">Junior's</a> (20-30$)</li>
                 </ul>
             </div>
         </div>
@@ -305,417 +390,4 @@
             <div class="time-block">
                 <h3><span class="icon">☀️</span> Matin</h3>
                 <ul>
-                    <li>Central Park côté sud : Columbus Circle</li>
-                    <li>Balade Lakes, Bow Bridge</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> 59 St – Columbus Circle (A/C/B/D/1)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Muséum américain d'histoire naturelle (~30$)</li>
-                    <li>Balade Upper West Side, rues rési, cafés locaux</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> 81 St – Museum of Natural History (B/C)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Sunset Riverside Park (bord Hudson, 72nd-79th St)</li>
-                    <li>Ambiance locals, moins touristique</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- JOUR 3 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🏛️ Jour 3 - Upper East + MET + Rooftops</h2>
-                <div class="day-budget">55-70$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>Balade Upper East Side (Lexington / 3rd Ave)</li>
-                    <li>Petites bakeries locales</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> 77 St (ligne 6) ou 72 St (Q)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>MET - Metropolitan Museum of Art (~30$)</li>
-                    <li>2-3 zones : Egypt, Impressionnistes, rooftop MET si ouvert</li>
-                    <li>Sortie côté Central Park pour chill</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Rooftop ART SoHo ou One40 (cocktail 18-25$)</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 ART SoHo :</strong> Houston St (1) ou Canal St (A/C/E)<br>
-                    <strong>🚇 One40 :</strong> Rector St (1 ou R/W)
-                </div>
-            </div>
-        </div>
-
-        <!-- JOUR 4 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🏙️ Jour 4 - Downtown / 9-11 / One World</h2>
-                <div class="day-budget">50-90$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>Financial District : Wall Street</li>
-                    <li>Charging Bull, Trinity Church</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> Wall St (4/5 ou 2/3), Broad St (J/Z)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Mémorial du 11-Septembre (extérieur gratuit)</li>
-                    <li>Musée 9/11 si tu veux (~30$)</li>
-                    <li>One World Trade Observatory (~45$)</li>
-                    <li>Balade Battery Park City Parks, Rockefeller Park, Teardrop Park</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Rooftop Financial District : Highwater ou Hide Rooftop</li>
-                    <li>Cocktail 18-20$</li>
-                </ul>
-            </div>
-            
-            <div class="tips-section">
-                <h3>💡 Budget variable</h3>
-                <p>Avec musée + One World : 80-90$ | Sans un des deux : 50-60$</p>
-            </div>
-        </div>
-
-        <!-- JOUR 5 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🌉 Jour 5 - Brooklyn / Dumbo / Bridge</h2>
-                <div class="day-budget">20-30$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>Brooklyn Bridge Park – Pier 1</li>
-                    <li>Panorama Manhattan, Dumbo</li>
-                    <li>Photo archi cliché avec le pont</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> High St – Brooklyn Bridge (A/C) ou York St (F)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Traversée Brooklyn Bridge à pied vers Manhattan</li>
-                    <li>Vue Manhattan en face (plus stylé)</li>
-                    <li>Pause City Hall Park / Thomas Paine Park</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Retour :</strong> Brooklyn Bridge – City Hall (4/5/6), City Hall (R/W)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Retour Brooklyn pour dîner local</li>
-                    <li>Ou back Manhattan selon envie</li>
-                </ul>
-            </div>
-            
-            <div class="tips-section">
-                <h3>💸 Budget mini</h3>
-                <p>Full quasi gratos, juste transports + café/glace</p>
-            </div>
-        </div>
-
-        <!-- JOUR 6 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🎨 Jour 6 - Greenpoint / Williamsburg</h2>
-                <div class="day-budget">30-40$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>Balade street art, friperies, cafés</li>
-                    <li>Vibe jeunes / locaux</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> Bedford Ave (L) ou Greenpoint Ave (G)
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Brooklyn Waterfront : North 5th St Pier, Domino Park</li>
-                    <li>Vue skyline sans touristes</li>
-                    <li>Coffee shop pour création contenu si besoin</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Bar local à Williamsburg (beaucoup de bars à cocktails)</li>
-                    <li>Ou retour Manhattan</li>
-                </ul>
-            </div>
-            
-            <div class="tips-section">
-                <h3>✨ Spot atypique</h3>
-                <p>Beaucoup moins touristique que Midtown !</p>
-            </div>
-        </div>
-
-        <!-- JOUR 7 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🖼️ Jour 7 - Musées + Chelsea</h2>
-                <div class="day-budget">40-60$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>MoMA (~30$) OU Whitney Museum</li>
-                    <li>Si Whitney : balade Meatpacking / fin High Line</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 MoMA :</strong> 5 Av/53 St (E/M)<br>
-                    <strong>🚇 Whitney :</strong> 14 St (A/C/E) puis marche
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Chelsea : Citizens Of Chelsea pour brunch/café</li>
-                    <li>Balade galeries d'art (gratuit !)</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Greenwich Village : Washington Square Fountain</li>
-                    <li>Bars de jazz, petits restos</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- JOUR 8 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🌆 Jour 8 - New Jersey Skyline Views</h2>
-                <div class="day-budget">40-60$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>PATH train vers Jersey City / Hoboken (~2,75$/trajet)</li>
-                    <li>Hudson River Waterfront Walkway</li>
-                    <li>J Owen Grundy Park : vue insane sur Manhattan</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 PATH :</strong> Depuis World Trade Center ou 33rd St
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Hamilton Park ou Morris Canal Park</li>
-                    <li>Vues skyline / chill avec locaux</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>RoofTop at Exchange Place</li>
-                    <li>Vue de ouf sur Manhattan (côté Jersey)</li>
-                    <li>1-2 cocktails (18-25$)</li>
-                    <li>Retour Manhattan en PATH</li>
-                </ul>
-            </div>
-            
-            <div class="tips-section">
-                <h3>🌟 Spot ultra local</h3>
-                <p>Quasiment que des locaux, vues spectaculaires !</p>
-            </div>
-        </div>
-
-        <!-- JOUR 9 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>✈️ Jour 9 - Intrepid + Piers Hudson</h2>
-                <div class="day-budget">40-50$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>Intrepid Sea-Air-Space Museum (~30$)</li>
-                    <li>Porte-avions, Concorde, navette spatiale</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> 42 St – Port Authority (A/C/E) + 10-15 min marche vers Pier 86
-                </div>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Balade piers sur l'Hudson côté Midtown</li>
-                    <li>Petits parcs, terrains de basket</li>
-                    <li>Vibe locaux / joggeurs</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Dîner Hell's Kitchen</li>
-                    <li>Buena Vista, Chi Restaurant & Bar, ou Capizzi (pizza)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- JOUR 10 -->
-        <div class="day-card">
-            <div class="day-header">
-                <h2>🛍️ Jour 10 - Replay / Shopping / Flex</h2>
-                <div class="day-budget">20-50$</div>
-            </div>
-            
-            <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    <li>Shopping SoHo, 5th Avenue</li>
-                    <li>OU retour quartier préféré</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    <li>Musée plus niche si dispo :</li>
-                    <li>Museum of the City of New York (~25$)</li>
-                    <li>Ou petites expos / galleries</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
-                <ul>
-                    <li>Dernier coucher de soleil</li>
-                    <li>Brooklyn Bridge Park OU Battery Park / South Cove / Rockefeller Park</li>
-                    <li>Plus calme, ambiance locals</li>
-                </ul>
-            </div>
-            
-            <div class="tips-section">
-                <h3>🔄 Journée flexible</h3>
-                <p>Refais ce que tu as préféré ou rattrape ce que t'as manqué !</p>
-            </div>
-        </div>
-
-        <!-- SECTION TIPS FINAUX -->
-        <div class="budget-summary">
-            <h2>🍴 Idées Restos (max 25$/pers)</h2>
-            <div class="budget-grid">
-                <div class="budget-item">
-                    <h3>Junior's Restaurant</h3>
-                    <p>Times Square - Cheesecake iconique + gros plats US</p>
-                </div>
-                <div class="budget-item">
-                    <h3>Capizzi</h3>
-                    <p>Vraie pizza napolitaine, ambiance familiale</p>
-                </div>
-                <div class="budget-item">
-                    <h3>Chi Restaurant & Bar</h3>
-                    <p>Très bon chinois, bon rapport qualité-prix</p>
-                </div>
-                <div class="budget-item">
-                    <h3>Buena Vista</h3>
-                    <p>Ambiance latino + bons cocktails</p>
-                </div>
-                <div class="budget-item">
-                    <h3>Citizens Of Chelsea</h3>
-                    <p>Brunch stylé, bon café, vibes cool</p>
-                </div>
-                <div class="budget-item">
-                    <h3>The Wilson</h3>
-                    <p>Brunch/US food moderne, cocktails</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="budget-summary">
-            <h2>🍹 Rooftops / Bars</h2>
-            <div class="tips-section">
-                <ul style="list-style: none; padding: 0;">
-                    <li style="padding: 10px 0;"><strong>Mr. Purple</strong> - Lower East Side, rooftop hype, vue</li>
-                    <li style="padding: 10px 0;"><strong>ART SoHo rooftop</strong> - Plus chill, bon spot dates/potes</li>
-                    <li style="padding: 10px 0;"><strong>Highwater Rooftop</strong> - Financial District, vue + drinks</li>
-                    <li style="padding: 10px 0;"><strong>Hide Rooftop</strong> - Financial District</li>
-                    <li style="padding: 10px 0;"><strong>RoofTop at Exchange Place</strong> - Jersey City, énorme vue Manhattan</li>
-                </ul>
-                <p style="margin-top: 20px; font-style: italic; opacity: 0.8;">⭐ Cocktails : 18-25$ en moyenne</p>
-            </div>
-        </div>
-
-        <div class="tips-section" style="margin: 40px 0; padding: 30px; background: rgba(255,255,255,0.15);">
-            <h2 style="margin-bottom: 20px; font-size: 1.8em;">💡 Tips Finaux</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🎫 Pass métro 7 jours :</strong> Prends-le direct à l'arrivée (34$), tu vas tout rentabiliser</li>
-                <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🏟️ Réservations :</strong> One World Trade + gros musées : réserve en ligne avant pour éviter files</li>
-                <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>📸 Spots photos :</strong> Dumbo au lever/coucher soleil, Brooklyn Bridge Park, Top of the Rock, rooftops</li>
-                <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>☕ Coffee shops :</strong> Idéal pour bosser création contenu entre deux spots</li>
-                <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);"><strong>🌧️ Plan pluie :</strong> Jour 10 = flex, tu peux inverser avec un jour beau temps</li>
-                <li style="padding: 10px 0;"><strong>👟 Marche :</strong> Prévois bonnes chaussures, tu vas marcher 15-20k pas/jour facile</li>
-            </ul>
-        </div>
-
-        <footer style="text-align: center; padding: 40px 0; opacity: 0.8;">
-            <p style="font-size: 1.2em; margin-bottom: 10px;">🗽 Bon trip à New York !</p>
-            <p>1-12 avril 2026 | Budget total : 440-550$ activités + 250$ repas</p>
-        </footer>
-
-    </div>
-</body>
-</html>
+                    ><a href="https://maps.google.com/?q=Central+

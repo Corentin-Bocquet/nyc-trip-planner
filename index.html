@@ -27,107 +27,96 @@
 
         header {
             text-align: center;
-            padding: 50px 0;
-            animation: fadeInDown 1s;
-        }
-
-        header h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffa500 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
-            letter-spacing: -1px;
-        }
-
-        header p {
-            font-size: 1.3em;
-            color: #94a3b8;
-            font-weight: 500;
-        }
-
-        .budget-summary {
-            background: rgba(15, 23, 42, 0.6);
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 40px;
-            margin: 40px 0;
-            border: 1.5px solid rgba(148, 163, 184, 0.1);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            animation: fadeIn 1.2s;
         }
 
-        .budget-summary h2 {
-            margin-bottom: 30px;
+        h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            color: #ffd93d;
+            text-shadow: 0 0 30px rgba(255, 217, 61, 0.5);
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #b8c5d6;
+            font-weight: 300;
+        }
+
+        /* Budget Section */
+        .budget-section {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(30px);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .budget-section h2 {
             font-size: 2em;
-            color: #ffd700;
-            font-weight: 700;
+            color: #ffd93d;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .budget-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .budget-item {
-            background: rgba(30, 41, 59, 0.5);
-            backdrop-filter: blur(10px);
-            padding: 28px;
-            border-radius: 16px;
-            border: 1px solid rgba(100, 116, 139, 0.2);
-            transition: all 0.3s ease;
+        .budget-card {
+            background: rgba(23, 37, 54, 0.6);
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .budget-item:hover {
-            transform: translateY(-5px);
-            border-color: rgba(255, 215, 0, 0.5);
-            background: rgba(30, 41, 59, 0.7);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.15);
-        }
-
-        .budget-item h3 {
-            font-size: 1.1em;
-            margin-bottom: 12px;
-            color: #cbd5e1;
-            font-weight: 600;
-        }
-
-        .budget-item .amount {
-            font-size: 2.5em;
-            font-weight: 800;
-            color: #ffd700;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-            margin: 8px 0;
-        }
-
-        .budget-item p {
-            color: #94a3b8;
+        .budget-card h3 {
             font-size: 0.95em;
+            color: #9fb4cc;
+            margin-bottom: 12px;
+            font-weight: 500;
         }
 
+        .budget-amount {
+            font-size: 2.3em;
+            font-weight: 900;
+            color: #ffd93d;
+            margin-bottom: 8px;
+        }
+
+        .budget-desc {
+            font-size: 0.85em;
+            color: #789aab;
+        }
+
+        /* Day Cards */
         .day-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 40px;
-            margin: 30px 0;
-            border: 1.5px solid rgba(148, 163, 184, 0.1);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            animation: fadeInUp 0.8s;
-            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(30px);
+            border-radius: 25px;
+            padding: 35px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .day-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
-            border-color: rgba(255, 215, 0, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.4);
         }
 
         .day-header {
@@ -136,207 +125,205 @@
             align-items: center;
             margin-bottom: 30px;
             padding-bottom: 20px;
-            border-bottom: 2px solid rgba(100, 116, 139, 0.2);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         .day-header h2 {
-            font-size: 2.2em;
-            color: #ffd700;
-            font-weight: 700;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+            font-size: 1.8em;
+            color: #ffd93d;
+            font-weight: 800;
         }
 
         .day-budget {
-            background: rgba(255, 215, 0, 0.12);
-            backdrop-filter: blur(10px);
-            padding: 14px 28px;
+            background: rgba(255, 217, 61, 0.15);
+            color: #ffd93d;
+            padding: 10px 25px;
             border-radius: 50px;
             font-weight: 700;
-            color: #ffd700;
-            border: 1.5px solid rgba(255, 215, 0, 0.3);
-            font-size: 1.15em;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.1);
+            font-size: 1.1em;
+            border: 2px solid rgba(255, 217, 61, 0.3);
         }
 
+        /* Time Blocks */
         .time-block {
-            margin: 28px 0;
-            padding: 28px;
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(15, 25, 40, 0.5);
+            border-radius: 18px;
+            border-left: 4px solid #6fbfff;
         }
 
         .time-block h3 {
-            font-size: 1.6em;
-            margin-bottom: 20px;
+            font-size: 1.4em;
+            color: #6fbfff;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #93c5fd;
-            font-weight: 700;
-        }
-
-        .time-block ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .time-block li {
-            padding: 12px 0;
-            padding-left: 32px;
-            position: relative;
-            color: #e2e8f0;
-            font-size: 1.05em;
-            line-height: 1.7;
-        }
-
-        .time-block li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #3b82f6;
-            font-size: 2em;
-            line-height: 0.9;
-        }
-
-        .location-link {
-            color: #fbbf24;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid rgba(251, 191, 36, 0.3);
-            padding-bottom: 2px;
-        }
-
-        .location-link:hover {
-            color: #fcd34d;
-            border-bottom-color: #fcd34d;
-            text-shadow: 0 0 12px rgba(252, 211, 77, 0.5);
-        }
-
-        .metro-info {
-            background: rgba(59, 130, 246, 0.12);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 18px;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .metro-info strong {
-            color: #93c5fd;
-            font-weight: 700;
         }
 
         .icon {
-            font-size: 1.4em;
+            font-size: 1.3em;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Activity Item with Image */
+        .activity-item {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .activity-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-            .day-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-            .budget-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .tips-section {
-            background: rgba(16, 185, 129, 0.12);
-            backdrop-filter: blur(10px);
-            padding: 24px;
+        .activity-image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
             border-radius: 12px;
-            margin: 24px 0;
-            border-left: 4px solid #10b981;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
 
-        .tips-section h3 {
-            margin-bottom: 12px;
-            color: #6ee7b7;
-            font-weight: 700;
+        .activity-text {
+            flex: 1;
         }
 
-        .tips-section p {
-            color: #d1fae5;
+        .activity-text p {
+            margin-bottom: 15px;
+            font-size: 1.05em;
+            color: #d4dde7;
+        }
+
+        /* Beautiful Map Button */
+        .map-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .map-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(66, 133, 244, 0.5);
+            background: linear-gradient(135deg, #5a95f5 0%, #45b963 100%);
+        }
+
+        .map-button:before {
+            content: '📍';
+            font-size: 1.2em;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+            color: #d4dde7;
+        }
+
+        ul li:before {
+            content: '>'};
+            position: absolute;
+            left: 0;
+            color: #ffd93d;
+            font-weight: bold;
+        }
+
+        .metro-info {
+            background: rgba(111, 191, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+            border-left: 4px solid #6fbfff;
         }
 
         footer {
             text-align: center;
-            padding: 50px 0;
-            color: #94a3b8;
-            font-size: 1.1em;
+            padding: 40px 20px;
+            margin-top: 60px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         footer p {
-            margin: 8px 0;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .tip {
+            font-size: 0.95em;
+            color: #9fb4cc;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .activity-content {
+                flex-direction: column;
+            }
+            
+            .activity-image {
+                width: 100%;
+                height: 200px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="container">
+        <!-- HEADER -->
         <header>
             <h1>🗽 NYC Trip Planner</h1>
-            <p>Itinéraire 10 jours à New York | 1-12 avril 2026</p>
+            <p class="subtitle">Itinéraire 10 jours à New York | 1-12 avril 2026</p>
         </header>
 
-        <div class="budget-summary">
+        <!-- BUDGET SECTION -->
+        <div class="budget-section">
             <h2>💰 Budget Total</h2>
             <div class="budget-grid">
-                <div class="budget-item">
+                <div class="budget-card">
                     <h3>Budget plaisir</h3>
-                    <div class="amount">440-550$</div>
-                    <p>Activités + transports</p>
+                    <div class="budget-amount">440-550$</div>
+                    <div class="budget-desc">Activités + transports</div>
                 </div>
-                <div class="budget-item">
+                <div class="budget-card">
                     <h3>Repas par jour</h3>
-                    <div class="amount">~25$</div>
-                    <p>Par personne max</p>
+                    <div class="budget-amount">~25$</div>
+                    <div class="budget-desc">Par personne max</div>
                 </div>
-                <div class="budget-item">
+                <div class="budget-card">
                     <h3>Pass métro 7 jours</h3>
-                    <div class="amount">34$</div>
-                    <p>Illimité</p>
+                    <div class="budget-amount">34$</div>
+                    <div class="budget-desc">Illimité</div>
                 </div>
-                <div class="budget-item">
+                <div class="budget-card">
                     <h3>Reste transport</h3>
-                    <div class="amount">~45$</div>
-                    <p>3 derniers jours</p>
+                    <div class="budget-amount">~45$</div>
+                    <div class="budget-desc">3 derniers jours</div>
                 </div>
             </div>
         </div>
@@ -344,38 +331,77 @@
         <!-- JOUR 1 -->
         <div class="day-card">
             <div class="day-header">
-                <h2>🌅 Jour 1 - Midtown / Times Square</h2>
+                <h2>🌇 Jour 1 - Midtown / Times Square</h2>
                 <div class="day-budget">20-30$</div>
             </div>
-            
+
             <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    >Arrivée / prise de repères</li>
-                    >Balade <a href="https://maps.google.com/?q=Times+Square+New+York" target="_blank" class="location-link">Times Square</a>, <a href="https://maps.google.com/?q=Bryant+Park+New+York" target="_blank" class="location-link">Bryant Park</a></li>
-                    ><a href="https://maps.google.com/?q=New+York+Public+Library" target="_blank" class="location-link">New York Public Library</a></li>
-                </ul>
+                <h3><span class="icon">🌅</span> Matin</h3>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1560750933-01?w=800&q=80" alt="Times Square" class="activity-image">
+                        <div class="activity-text">
+                            <p>🎆 <strong>Times Square</strong> - Découvrez l'épicene de NYC avec ses écrans géants et son ambiance unique</p>
+                            <a href="https://maps.google.com/?q=Times+Square+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=800&q=80" alt="Bryant Park" class="activity-image">
+                        <div class="activity-text">
+                            <p>🌳 <strong>Bryant Park</strong> - Un havre de paix au coeur de Manhattan, parfait pour se détendre</p>
+                            <a href="https://maps.google.com/?q=Bryant+Park+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1568584711497-f9c4d4b6a3d5?w=800&q=80" alt="New York Public Library" class="activity-image">
+                        <div class="activity-text">
+                            <p>📚 <strong>New York Public Library</strong> - Architecture majestueuse et collections impressionnantes</p>
+                            <a href="https://maps.google.com/?q=New+York+Public+Library" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="metro-info">
-                    <strong>🚇 Métro :</strong> Times Sq – 42 St (lignes N/Q/R/W/1/2/3/7)
+                    🚇 <strong>Métro :</strong> Times Sq - 42 St (lignes N/Q/R/W/1/2/3/7)
                 </div>
             </div>
 
             <div class="time-block">
-                <h3><span class="icon">🌞</span> Après-midi</h3>
-                <ul>
-                    ><a href="https://maps.google.com/?q=Hudson+Yards+New+York" target="_blank" class="location-link">Hudson Yards</a> : The Vessel (extérieur gratos)</li>
-                    >Balade <a href="https://maps.google.com/?q=High+Line+Park+New+York" target="_blank" class="location-link">High Line</a> (parc sur ancienne voie ferrée)</li>
-                </ul>
-                <div class="metro-info">
-                    <strong>🚇 Métro :</strong> 34 St – Hudson Yards (ligne 7)
+                <h3><span class="icon">⛅</span> Après-midi</h3>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1543716091-a840c05249ec?w=800&q=80" alt="Hudson Yards" class="activity-image">
+                        <div class="activity-text">
+                            <p>🏛️ <strong>Hudson Yards</strong> - Le nouveau quartier ultra-moderne avec The Vessel</p>
+                            <a href="https://maps.google.com/?q=Hudson+Yards+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80" alt="High Line" class="activity-image">
+                        <div class="activity-text">
+                            <p>🌿 <strong>High Line</strong> - Parc suspendu sur ancienne voie ferrée, absolument magnifique</p>
+                            <a href="https://maps.google.com/?q=High+Line+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="time-block">
-                <h3><span class="icon">🌃</span> Soir</h3>
+                <h3><span class="icon">🌙</span> Soir</h3>
                 <ul>
-                    >Times Square de nuit (obligé)</li>
-                    >Cheesecake chez <a href="https://maps.google.com/?q=Junior's+Restaurant+Times+Square+New+York" target="_blank" class="location-link">Junior's</a> (20-30$)</li>
+                    <li>Times Square de nuit (obligatoire!)</li>
+                    <li>Cheesecake chez Junior's (20-30$)</li>
                 </ul>
             </div>
         </div>
@@ -386,146 +412,165 @@
                 <h2>🌳 Jour 2 - Central Park + Upper West</h2>
                 <div class="day-budget">40-50$</div>
             </div>
-            
+
             <div class="time-block">
-                <h3><span class="icon">☀️</span> Matin</h3>
-                <ul>
-                    ><a href="https://maps.google.com/?q=Central+
-Park">Central Park</a>
-                    >🗽 Balade dans Central Park (Strawberry Fields, Bethesda Terrace)</li>
-                    >🍱 Déjeuner chez <a href="https://maps.google.com/?q=Tavern+on+the+Green">Tavern on the Green</a> (dans le parc)</li>
-                </ul>
+                <h3><span class="icon">🌅</span> Matin</h3>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?w=800&q=80" alt="Central Park" class="activity-image">
+                        <div class="activity-text">
+                            <p>🌾 <strong>Central Park</strong> - Le poumon vert de NYC, Strawberry Fields & Bethesda Terrace</p>
+                            <a href="https://maps.google.com/?q=Central+Park+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metro-info">
+                    🚇 <strong>Métro :</strong> 34 St - Hudson Yards (ligne 7)
+                </div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">⛅</span> Après-midi</h3>
-                <ul>
-                    >🏛️ <a href="https://maps.google.com/?q=The+Metropolitan+Museum+of+Art+New+York">Metropolitan Museum</a> (immense, prévoir 3h minimum)</li>
-                    >🧁 Pause gourmande au <a href="https://maps.google.com/?q=Levain+Bakery+New+York">Levain Bakery</a> (cookies légendaires)</li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=800&q=80" alt="Metropolitan Museum" class="activity-image">
+                        <div class="activity-text">
+                            <p>🏛️ <strong>Metropolitan Museum</strong> - Collection d'art exceptionnelle, prévoir 3h minimum</p>
+                            <a href="https://maps.google.com/?q=The+Metropolitan+Museum+of+Art+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- JOUR 3 -->
         <div class="day-card">
             <div class="day-header">
-                <h2>👙 Jour 3 - Brooklyn + Soho + One World</h2>
+                <h2>👙 Jour 3 - Brooklyn + Soho</h2>
                 <div class="day-budget">~70$</div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">🌅</span> Matin</h3>
-                <ul>
-                    >🌉 <a href="https://maps.google.com/?q=Brooklyn+Bridge+New+York">Brooklyn Bridge</a> au lever du soleil (vue magique)</li>
-                    >☕ Café + breakfast bowl chez <a href="https://maps.google.com/?q=Devocion+Brooklyn">Devoción</a> (coffee shop incroyable)</li>
-                    >🖼️ Balade dans <a href="https://maps.google.com/?q=Dumbo+Brooklyn">DUMBO</a> (photo iconique sous Manhattan Bridge)</li>
-                </ul>
-            </div>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=800&q=80" alt="Brooklyn Bridge" class="activity-image">
+                        <div class="activity-text">
+                            <p>🌉 <strong>Brooklyn Bridge</strong> - Traverser à pied au lever du soleil, vue magique sur Manhattan</p>
+                            <a href="https://maps.google.com/?q=Brooklyn+Bridge+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="time-block">
-                <h3><span class="icon">🍔</span> Midi</h3>
-                <ul>
-                    >🍕 Pizza chez <a href="https://maps.google.com/?q=Juliana%27s+Pizza+Brooklyn">Juliana's</a> (une des meilleures de NYC)</li>
-                    >🚶 Balade à <a href="https://maps.google.com/?q=Brooklyn+Heights+Promenade">Brooklyn Heights Promenade</a></li>
-                </ul>
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1555109307-f7d9da25c244?w=800&q=80" alt="DUMBO Brooklyn" class="activity-image">
+                        <div class="activity-text">
+                            <p>🖼️ <strong>DUMBO</strong> - Le quartier iconique avec la vue parfaite sur le Manhattan Bridge</p>
+                            <a href="https://maps.google.com/?q=Dumbo+Brooklyn" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">⛅</span> Après-midi</h3>
-                <ul>
-                    >🛍️ Shopping dans <a href="https://maps.google.com/?q=Soho+New+York">Soho</a> (quartier branché)</li>
-                    >🧇 Pause glace chez <a href="https://maps.google.com/?q=Van+Leeuwen+Ice+Cream+Soho">Van Leeuwen</a></li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1555109307-f7d9da25c244?w=800&q=80" alt="Soho" class="activity-image">
+                        <div class="activity-text">
+                            <p>🛍️ <strong>Soho</strong> - Shopping dans le quartier le plus branché de Manhattan</p>
+                            <a href="https://maps.google.com/?q=Soho+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">🌙</span> Soir</h3>
-                <ul>
-                    >🌆 <a href="https://maps.google.com/?q=One+World+Observatory+New+York">One World Observatory</a> au coucher du soleil (réserver en ligne)</li>
-                    >🍜 Dîner chez <a href="https://maps.google.com/?q=Eataly+NYC">Eataly</a> (italien, plusieurs étages)</li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1546984253-f3e7293c0d5e?w=800&q=80" alt="One World Observatory" class="activity-image">
+                        <div class="activity-text">
+                            <p>🌆 <strong>One World Observatory</strong> - Vue panoramique au coucher du soleil, à réserver</p>
+                            <a href="https://maps.google.com/?q=One+World+Observatory+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- JOUR 4 -->
         <div class="day-card">
             <div class="day-header">
-                <h2>🎭 Jour 4 - Chelsea + High Line + Hudson Yards</h2>
+                <h2>🎭 Jour 4 - Chelsea + High Line</h2>
                 <div class="day-budget">~50$</div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">🌅</span> Matin</h3>
-                <ul>
-                    >🖼️ <a href="https://maps.google.com/?q=Chelsea+Market+New+York">Chelsea Market</a> (marché couvert branché)</li>
-                    >🥞 Croissant + café chez <a href="https://maps.google.com/?q=Amy%27s+Bread+Chelsea">Amy's Bread</a></li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🍔</span> Midi</h3>
-                <ul>
-                    >🌳 Balade sur <a href="https://maps.google.com/?q=High+Line+New+York">High Line</a> (parc suspendu, magnifique)</li>
-                    >🌮 Tacos chez <a href="https://maps.google.com/?q=Los+Tacos+No+1+Chelsea">Los Tacos No.1</a> dans Chelsea Market</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">⛅</span> Après-midi</h3>
-                <ul>
-                    >🐝 Voir <a href="https://maps.google.com/?q=The+Vessel+Hudson+Yards">The Vessel</a> à Hudson Yards</li>
-                    >🛍️ <a href="https://maps.google.com/?q=Hudson+Yards+Shopping">Hudson Yards</a> - centres commerciaux + vue panoramique gratuite</li>
-                    >☕ Pause café chez <a href="https://maps.google.com/?q=Blue+Bottle+Coffee+Hudson+Yards">Blue Bottle Coffee</a></li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌙</span> Soir</h3>
-                <ul>
-                    >🍔 Dîner chez <a href="https://maps.google.com/?q=Shake+Shack+Theater+District">Shake Shack</a> (burgers iconiques)</li>
-                    >🎭 Spectacle à <a href="https://maps.google.com/?q=Broadway+Theater+District+NYC">Broadway</a> (réserver à l'avance sur TKTS ou site officiel)</li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80" alt="Chelsea Market" class="activity-image">
+                        <div class="activity-text">
+                            <p>🖼️ <strong>Chelsea Market</strong> - Marché couvert branché, parfait pour le petit-déjeuner</p>
+                            <a href="https://maps.google.com/?q=Chelsea+Market+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- JOUR 5 -->
         <div class="day-card">
             <div class="day-header">
-                <h2>🗽 Jour 5 - Statue de la Liberté + Wall Street + East Village</h2>
+                <h2>🗽 Jour 5 - Statue de la Liberté + Wall Street</h2>
                 <div class="day-budget">~45$</div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">🌅</span> Matin</h3>
-                <ul>
-                    >🗽 <a href="https://maps.google.com/?q=Statue+of+Liberty+Ferry">Ferry pour la Statue de la Liberté</a> (réserver en ligne, partir tôt)</li>
-                    >🏝️ Visite d'<a href="https://maps.google.com/?q=Ellis+Island">Ellis Island</a> (musée de l'immigration)</li>
-                </ul>
-            </div>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1566404791232-af9fe0ae8f8b?w=800&q=80" alt="Statue of Liberty" class="activity-image">
+                        <div class="activity-text">
+                            <p>🗽 <strong>Statue de la Liberté</strong> - Symbole iconique de NYC, ferry à réserver tôt</p>
+                            <a href="https://maps.google.com/?q=Statue+of+Liberty+Ferry" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="time-block">
-                <h3><span class="icon">🍔</span> Midi</h3>
-                <ul>
-                    >🍔 Déjeuner chez <a href="https://maps.google.com/?q=Stone+Street+Historic+District">Stone Street</a> (rue piétonne avec terrasses)</li>
-                    >🏛️ Balade à <a href="https://maps.google.com/?q=Wall+Street+New+York">Wall Street</a> + voir le Taureau de Wall Street</li>
-                </ul>
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1568608672585-733ff4dbb0af?w=800&q=80" alt="Ellis Island" class="activity-image">
+                        <div class="activity-text">
+                            <p>🏝️ <strong>Ellis Island</strong> - Musée de l'immigration, histoire fascinante</p>
+                            <a href="https://maps.google.com/?q=Ellis+Island" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">⛅</span> Après-midi</h3>
-                <ul>
-                    >🍷 Exploration d'<a href="https://maps.google.com/?q=East+Village+New+York">East Village</a> (quartier alternatif)</li>
-                    >☕ Café chez <a href="https://maps.google.com/?q=Caf%C3%A9+Grumpy+East+Village">Café Grumpy</a></li>
-                    >📚 Visite de librairies vintages (<a href="https://maps.google.com/?q=Strand+Bookstore+NYC">Strand Bookstore</a>)</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🌙</span> Soir</h3>
-                <ul>
-                    >🍜 Ramen chez <a href="https://maps.google.com/?q=Ippudo+East+Village">Ippudo</a> (délicieux)</li>
-                    >🍸 Sortie dans les bars de <a href="https://maps.google.com/?q=St+Marks+Place+NYC">St. Mark's Place</a></li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1541963058-d22689bc3f94?w=800&q=80" alt="Wall Street" class="activity-image">
+                        <div class="activity-text">
+                            <p>🏛️ <strong>Wall Street</strong> - Le coeur financier du monde + Charging Bull</p>
+                            <a href="https://maps.google.com/?q=Wall+Street+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -538,34 +583,40 @@ Park">Central Park</a>
 
             <div class="time-block">
                 <h3><span class="icon">🌅</span> Matin</h3>
-                <ul>
-                    >🎨 <a href="https://maps.google.com/?q=MoMA+New+York">MoMA</a> (Modern Art Museum, collection exceptionnelle)</li>
-                    >☕ Café au rez-de-chaussée du MoMA</li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">🍔</span> Midi</h3>
-                <ul>
-                    >🍜 Ramen ou poke bowl dans Midtown</li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1566127444979-b3d2b665f1f7?w=800&q=80" alt="MoMA" class="activity-image">
+                        <div class="activity-text">
+                            <p>🎨 <strong>MoMA</strong> - Musée d'art moderne, collection exceptionnelle</p>
+                            <a href="https://maps.google.com/?q=MoMA+New+York" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">⛅</span> Après-midi</h3>
-                <ul>
-                    >🌿 Balade dans <a href="https://maps.google.com/?q=Greenwich+Village+NYC">Greenwich Village</a> (quartier bobo)</li>
-                    >🎶 Voir <a href="https://maps.google.com/?q=Washington+Square+Park">Washington Square Park</a> + son arc de triomphe</li>
-                    >🍪 Cupcakes chez <a href="https://maps.google.com/?q=Magnolia+Bakery+Greenwich">Magnolia Bakery</a></li>
-                </ul>
-            </div>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1517456793572-1d8efd6dc135?w=800&q=80" alt="Greenwich Village" class="activity-image">
+                        <div class="activity-text">
+                            <p>🌿 <strong>Greenwich Village</strong> - Quartier boho-chic avec charme authentique</p>
+                            <a href="https://maps.google.com/?q=Greenwich+Village+NYC" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="time-block">
-                <h3><span class="icon">🌙</span> Soir</h3>
-                <ul>
-                    >🍕 Pizza chez <a href="https://maps.google.com/?q=Joe%27s+Pizza+Greenwich">Joe's Pizza</a> (classique NY)</li>
-                    >🎷 Soirée jazz dans un club de Greenwich (ex : <a href="https://maps.google.com/?q=Blue+Note+Jazz+Club+NYC">Blue Note</a>)</li>
-                </ul>
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Washington Square Park" class="activity-image">
+                        <div class="activity-text">
+                            <p>🎶 <strong>Washington Square Park</strong> - Arc de triomphe et ambiance estudiantine</p>
+                            <a href="https://maps.google.com/?q=Washington+Square+Park" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -578,28 +629,33 @@ Park">Central Park</a>
 
             <div class="time-block">
                 <h3><span class="icon">🌅</span> Matin</h3>
-                <ul>
-                    >🛍️ Dernières emplettes dans <a href="https://maps.google.com/?q=Fifth+Avenue+NYC">Fifth Avenue</a></li>
-                    >🍩 Donuts chez <a href="https://maps.google.com/?q=Dunkin+Donuts+NYC">Dunkin'</a> ou bagel chez <a href="https://maps.google.com/?q=Ess-a-Bagel+NYC">Ess-a-Bagel</a></li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1565704474551-fbe48b12b05?w=800&q=80" alt="Fifth Avenue" class="activity-image">
+                        <div class="activity-text">
+                            <p>🛍️ <strong>Fifth Avenue</strong> - L'avenue du shopping de luxe et des grandes enseignes</p>
+                            <a href="https://maps.google.com/?q=Fifth+Avenue+NYC" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="time-block">
                 <h3><span class="icon">🍔</span> Midi</h3>
-                <ul>
-                    >🥪 Déjeuner au <a href="https://maps.google.com/?q=Grand+Central+Oyster+Bar">Grand Central Oyster Bar</a> (dans la gare)</li>
-                    >📸 Dernières photos à <a href="https://maps.google.com/?q=Grand+Central+Terminal">Grand Central Terminal</a></li>
-                </ul>
-            </div>
-
-            <div class="time-block">
-                <h3><span class="icon">✈️</span> Après-midi</h3>
-                <ul>
-                    >👜 Récupérer les bagages à l'hôtel</li>
-                    >🚕 Direction aéroport (prévoir 1h30-2h avant le vol)</li>
-                </ul>
+                
+                <div class="activity-item">
+                    <div class="activity-content">
+                        <img src="https://images.unsplash.com/photo-1529074963764-98f45c47344b?w=800&q=80" alt="Grand Central Terminal" class="activity-image">
+                        <div class="activity-text">
+                            <p>📸 <strong>Grand Central Terminal</strong> - Gare historique magnifique, à voir absolument</p>
+                            <a href="https://maps.google.com/?q=Grand+Central+Terminal" class="map-button" target="_blank">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 
     <!-- FOOTER -->
